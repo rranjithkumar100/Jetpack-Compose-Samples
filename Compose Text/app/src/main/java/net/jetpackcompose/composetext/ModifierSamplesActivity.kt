@@ -39,10 +39,11 @@ class ModifierSamplesActivity : ComponentActivity() {
 
 @Composable
 fun ModifierSample() {
-    Column {
+    Row {
         TextWidthPadding()
         TextWithSize()
         AlphaSample()
+        TextWidthMatchParent()
     }
 }
 
@@ -76,10 +77,25 @@ fun TextWithSize(){
             .background(Color.Blue)
             .padding(Dp(10f))
             .size(
-                width = Dp(250f), height = Dp(150f)
+                width = Dp(250f), height = Dp(100f)
             )
     )
 }
+
+@Composable
+fun TextWidthMatchParent(){
+    Text(
+        text = "Text Width Match Parent",
+        color = Color.White,
+        modifier = Modifier
+            .background(Color.Gray)
+            .padding(Dp(10f))
+            .fillMaxWidth(1f)
+            .fillMaxHeight(0.5f)//25% height
+            .padding(Dp(10f))
+    )
+}
+
 @Composable
 fun AlphaSample() {
     Box(
