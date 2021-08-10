@@ -1,6 +1,5 @@
 package net.jetpackcompose.composetext
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -36,7 +35,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun TextContainer() {
     Column {
-        TextWithSize("Big text", 40.sp)
+        SizeModifier("Big text", 40.sp)
         MaxLines()
         ColorText()
         BoldText()
@@ -46,7 +45,7 @@ fun TextContainer() {
     }
 }
 @Composable
-fun TextWithSize(label: String, size: TextUnit) {
+fun SizeModifier(label: String, size: TextUnit) {
     Text(label, fontSize = size)
 }
 @Composable
