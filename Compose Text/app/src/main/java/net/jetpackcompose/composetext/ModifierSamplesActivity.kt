@@ -4,9 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateContentSize
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.shape.RoundedCornerShape
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -15,9 +18,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathEffect
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
@@ -50,16 +57,20 @@ fun ModifierSample() {
 //        BackgroundColor()
         //WidthAndHeightModifier()
         //TextWidthPadding()
-     //   SizeModifier()
-       //AlphaModifier()
-      //FillWidthModifier()
-       //FillHeightModifier()
+        //   SizeModifier()
+        //AlphaModifier()
+        //FillWidthModifier()
+        //FillHeightModifier()
         //FillSizeModifier()
-        RotateModifier()
+        // RotateModifier()
+        //WeightModifier()
+       // BorderModifier()
+     //   BorderWithShape()
+        ClipModifier()
     }
 }
 
-@Preview
+@Preview(showSystemUi = true, showBackground = true)
 @Composable
 fun ModifierPreview() {
     ComposeTextTheme {
@@ -160,12 +171,78 @@ fun AlphaModifier() {
 }
 
 @Composable
+fun WeightModifier() {
+    Row() {
+        Column(
+            Modifier
+                .weight(1f)
+                .background(Color.Red)
+        ) {
+            Text(text = "Weight = 1", color = Color.White)
+        }
+        Column(
+            Modifier
+                .weight(1f)
+                .background(Color.Blue)
+        ) {
+            Text(text = "Weight = 1", color = Color.White)
+        }
+        Column(
+            Modifier
+                .weight(2f)
+                .background(Color.Green)
+        ) {
+            Text(text = "Weight = 2")
+        }
+
+    }
+}
+
+@Composable
 fun RotateModifier() {
     Box(
         Modifier
             .rotate(45f)
             .size(250.dp)
-            .background(Color.Red)
+            .background(Color.Gray)
+    )
+}
+
+@Composable
+fun BorderModifier() {
+    Text(
+        text = "Text with Red Border",
+        modifier = Modifier
+            .padding(10.dp)
+            .background(Color.Yellow)
+            .border(2.dp,Color.Red)
+            .padding(10.dp)
+    )
+}
+
+@Composable
+fun BorderWithShape() {
+    Text(
+        text = "Text with round border",
+
+        modifier = Modifier
+            .padding(10.dp)
+            .border(2.dp, SolidColor(Color.Green), RoundedCornerShape(20.dp))
+            .padding(10.dp)
+    )
+
+}
+
+@Composable
+fun ClipModifier() {
+    Text(
+        text = "Text with Clipped background",
+        color = Color.White,
+        modifier = Modifier
+            .padding(Dp(10f))
+            .clip(RoundedCornerShape(25.dp))
+            .background(Color.Blue)
+            .padding(Dp(15f))
     )
 }
 
