@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 import net.jetpackcompose.composetext.ui.theme.ComposeTextTheme
 import net.jetpackcompose.composetext.ui.theme.Purple200
 
-class MainActivity : ComponentActivity() {
+class TextBasicsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -70,12 +70,12 @@ fun SelectableText() {
 fun TextContainer() {
     Column {
         SizeModifier("Big text", 40.sp)
-        //ColorText()
-        //BoldText()
-        //ItalicText()
-        //OverflowedText()
-        //SelectableText()
-        //MaxLines()
+        ColorText()
+        BoldText()
+        ItalicText()
+        OverflowedText()
+        SelectableText()
+        MaxLines()
 
     }
 }
@@ -85,9 +85,6 @@ val  redTextStyle = TextStyle(color = Color.Red,fontSize = 30.sp)
 @Composable
 fun DefaultPreview() {
     Row {
-        Text(text = "Text 1",style = redTextStyle)
-        Text(text = "Text 2",style = redTextStyle)
-        Text(text = "Text 3")
-        Text(text = "Text 4")
+        TextContainer()
     }
 }
