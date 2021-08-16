@@ -4,11 +4,14 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -31,18 +34,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-}
-@Composable
-fun TextContainer() {
-    Column {
-        SizeModifier("Big text", 40.sp)
-        MaxLines()
-        ColorText()
-        BoldText()
-        ItalicText()
-        OverflowedText()
-        SelectableText()
-    }
 }
 @Composable
 fun SizeModifier(label: String, size: TextUnit) {
@@ -75,10 +66,28 @@ fun SelectableText() {
         Text("This text is selectable")
     }
 }
-@Preview(showBackground = true)
+@Composable
+fun TextContainer() {
+    Column {
+        SizeModifier("Big text", 40.sp)
+        //ColorText()
+        //BoldText()
+        //ItalicText()
+        //OverflowedText()
+        //SelectableText()
+        //MaxLines()
+
+    }
+}
+
+val  redTextStyle = TextStyle(color = Color.Red,fontSize = 30.sp)
+@Preview( showBackground = true, showSystemUi = true)
 @Composable
 fun DefaultPreview() {
-    ComposeTextTheme {
-        TextContainer()
+    Row {
+        Text(text = "Text 1",style = redTextStyle)
+        Text(text = "Text 2",style = redTextStyle)
+        Text(text = "Text 3")
+        Text(text = "Text 4")
     }
 }

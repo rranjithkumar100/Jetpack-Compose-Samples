@@ -10,20 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeText">
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeText.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
-
-
-        <activity
-            android:name=".ModifierSamplesActivity"
+            android:name=".HomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar">
@@ -34,16 +21,25 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ModifierSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ActivityTextStyles"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
             android:name=".LayoutsSampleActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.ComposeText.NoActionBar">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-        </activity>
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
     </application>
 
 </manifest>
