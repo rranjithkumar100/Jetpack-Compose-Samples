@@ -202,7 +202,6 @@ fun TextHeadingStyle() {
     }
 }
 
-
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun TextStylePreview() {

@@ -26,7 +26,28 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
+            android:name=".ActivityTextField"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
             android:name=".ModifierSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ImageSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ListViewSampleActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".GradientSamplesActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />

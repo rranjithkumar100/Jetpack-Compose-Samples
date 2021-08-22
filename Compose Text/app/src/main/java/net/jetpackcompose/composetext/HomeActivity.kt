@@ -43,6 +43,19 @@ class HomeActivity : ComponentActivity() {
                 CustomButton(text = "Button Samples") {
                     startActivity(Intent(context,ButtonsSampleActivity::class.java))
                 }
+                CustomButton(text = "Textfields ") {
+                    startActivity(Intent(context,ActivityTextField::class.java))
+                }
+                CustomButton(text = "Image Samples ") {
+                    startActivity(Intent(context,ImageSamplesActivity::class.java))
+                }
+                CustomButton(text = "ListView ") {
+                    startActivity(Intent(context,ListViewSampleActivity::class.java))
+                }
+                CustomButton(text = "Gradient Samples ") {
+                    startActivity(Intent(context,GradientSamplesActivity::class.java))
+                }
+
             }
         }
     }
