@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.runtime.*
@@ -43,7 +44,7 @@ fun TextFieldRootView() {
         LabelAndPlaceHolder()
         TextFieldWithInputType()
         TextFieldWithPasswordType()
-        OutLineTextField()
+        OutLineTextFieldSample()
         TextFieldWithIcons()
         TextFieldValidation()
     }
@@ -54,8 +55,8 @@ fun SimpleTextField() {
     var text by remember { mutableStateOf(TextFieldValue("")) }
     TextField(
         value = text,
-        onValueChange = {
-            text = it
+        onValueChange = { newText ->
+            text = newText
         }
     )
 }
@@ -72,7 +73,6 @@ fun LabelAndPlaceHolder() {
         label = { Text(text = "Your Label") },
         placeholder = { Text(text = "Your Placeholder/Hint") },
     )
-
 }
 
 @Composable
@@ -103,11 +103,11 @@ fun TextFieldWithPasswordType() {
 }
 
 @Composable
-fun OutLineTextField() {
+fun OutLineTextFieldSample() {
     var text by remember { mutableStateOf(TextFieldValue("")) }
     OutlinedTextField(
         value = text,
-        label = { Text(text = "OutLined TextField") },
+        label = { Text(text = "Enter Your Name") },
         onValueChange = {
             text = it
         }
@@ -120,8 +120,8 @@ fun TextFieldWithIcons() {
     var text by remember { mutableStateOf(TextFieldValue("")) }
     return OutlinedTextField(
         value = text,
-        leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = null) },
-        trailingIcon = { Icon(imageVector = Icons.Default.Info, contentDescription = null) },
+        leadingIcon = { Icon(imageVector = Icons.Default.Email, contentDescription = "emailIcon") },
+        //trailingIcon = { Icon(imageVector = Icons.Default.Add, contentDescription = null) },
         onValueChange = {
             text = it
         },
