@@ -55,6 +55,9 @@ class HomeActivity : ComponentActivity() {
                 CustomButton(text = "Gradient Samples ") {
                     startActivity(Intent(context,GradientSamplesActivity::class.java))
                 }
+                CustomButton(text = "Scaffold Sample ") {
+                    startActivity(Intent(context,ScaffoldSampleActivity::class.java))
+                }
 
             }
         }

@@ -14,7 +14,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
@@ -22,138 +24,107 @@ import androidx.compose.ui.unit.sp
 import net.jetpackcompose.composetext.model.FruitModel
 
 class ListViewSampleActivity : ComponentActivity() {
-    private  val TAG = "ListViewSampleActivity"
-    private val fruitsList = mutableListOf<FruitModel>()
+    private val TAG = "ListViewSampleActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setData()
         setContent {
-            MaterialTheme() {
-                ListRootView(fruitsList)
+            //ListListScopeSample()
+            //SimpleListView()
+             CustomListView()
+        }
+    }
+
+    @Composable
+    fun ListListScopeSample(){
+        LazyColumn {
+            // Add a single item
+            item {
+                Text(text = "Header")
+            }
+
+            // Add 3 items
+            items(3) { index ->
+                Text(text = "First List items : $index")
+            }
+
+            // Add 2 items
+            items(2) { index ->
+                Text(text = "Second List Items: $index")
+            }
+
+            // Add another single item
+            item {
+                Text(text = "Footer")
             }
         }
     }
 
-    private fun setData() {
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Banana", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Strawberry", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Mango", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Kiwi", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Papaya", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Banana", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Strawberry", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Mango", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Kiwi", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Papaya", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Banana", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Strawberry", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Mango", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Kiwi", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Papaya", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Banana", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Strawberry", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Mango", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Kiwi", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Papaya", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Apple", R.drawable.ic_cart))
-        fruitsList.add(FruitModel("Orange", R.drawable.ic_cart))
-    }
+    private val countryList =
+        mutableListOf("India", "Pakistan", "China", "United States")
+    private val listModifier = Modifier
+        .fillMaxSize()
+        .background(Color.Gray)
+        .padding(10.dp)
+    private val textStyle = TextStyle(fontSize = 20.sp, color = Color.White)
 
     @Composable
-    fun ListRootView(data: List<FruitModel>) {
-        var isLazyColumn = false
-        Column() {
-            Button(onClick = {
-                isLazyColumn = !isLazyColumn
-                Log.d(TAG, "ListRootView: click action : "+isLazyColumn)
-
-            }) {
-                if (!isLazyColumn) {
-                    Text(text = "Switch to LazyColumn (RecyclerView)")
-
-                } else {
-                    Text(text = "Switch to Column (ListView)")
-                }
-            }
-            if (isLazyColumn) {
-                LazyColumnSample(data = data)
-            } else {
-                ColumnSample(data = data)
+    fun SimpleListView() {
+        LazyColumn(modifier = listModifier) {
+            items(countryList) { country ->
+                Text(text = country, style = textStyle,modifier = Modifier.padding(10.dp))
             }
         }
-
     }
+    private val fruitsList = mutableListOf<FruitModel>()
+
 
     @Composable
-    fun LazyColumnSample(data: List<FruitModel>) {
-        Log.d(TAG, "LazyColumnSample: ")
+    fun CustomListView() {
+        //add the list
+        fruitsList.add(FruitModel("Apple", R.drawable.apple))
+        fruitsList.add(FruitModel("Orange", R.drawable.orange))
+        fruitsList.add(FruitModel("Banana", R.drawable.banana))
+        fruitsList.add(FruitModel("Strawberry", R.drawable.strawberry))
+        fruitsList.add(FruitModel("Mango", R.drawable.mango))
+
         LazyColumn(
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp),
             modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight()
-                .background(Color.Gray)
+                .fillMaxSize()
+                .background(Color.White)
         ) {
-            items(data) { model ->
-
+            items(fruitsList) { model ->
                 ListRow(model = model)
             }
         }
+
     }
 
-    @Composable
-    fun ColumnSample(data: List<FruitModel>) {
-        Log.d(TAG, "ColumnSample: ")
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .fillMaxHeight()
-                .background(Color.Gray)
-        ) {
-            data.forEach { model ->
-                ListRow(model = model)
-            }
-        }
-    }
 
     @Composable
     fun ListRow(model: FruitModel) {
-        Column(modifier = Modifier.padding(top = 10.dp)) {
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier
+                .wrapContentHeight()
+                .fillMaxWidth()
+                .background("#063041".color)
+        ) {
+            Image(
+                painter = painterResource(id = model.image),
+                contentDescription = "",
+                contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .padding(horizontal = 15.dp, vertical = 10.dp)
-                    .heightIn(100.dp, 150.dp)
-                    .fillMaxWidth()
-            ) {
-                Image(
-                    painter = painterResource(id = model.image),
-                    contentDescription = "",
-                    modifier = Modifier
-                        .width(100.dp)
-                        .padding(15.dp)
-                )
-                Text(
-                    text = model.name,
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    color = Color.White
-                )
-            }
-            Divider()
+                    .size(100.dp)
+                    .padding(5.dp)
+            )
+            Text(
+                text = model.name,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = Color.White
+            )
         }
     }
 }

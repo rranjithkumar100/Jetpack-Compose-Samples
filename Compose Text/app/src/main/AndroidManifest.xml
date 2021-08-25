@@ -47,6 +47,11 @@
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
+            android:name=".ScaffoldSampleActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
             android:name=".GradientSamplesActivity"
             android:exported="true"
             android:label="@string/app_name"
