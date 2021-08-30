@@ -18,14 +18,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
-import net.jetpackcompose.composetext.ui.theme.ComposeTextTheme
+import net.jetpackcompose.composetext.ui.theme.MyAppTheme
 import net.jetpackcompose.composetext.ui.theme.Purple200
 
 class TextBasicsActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposeTextTheme {
+            MyAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     TextContainer()

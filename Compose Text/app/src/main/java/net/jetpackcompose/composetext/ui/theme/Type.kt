@@ -10,8 +10,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import net.jetpackcompose.composetext.R
 
+
+val NexaFont = FontFamily(Font(R.font.nexa_regular), Font(R.font.nexa_bold,FontWeight.Bold))
+
 // Set of Material typography styles to start with
 val Typography = Typography(
+    defaultFontFamily = FontFamily.Serif,
     body1 = TextStyle(
         fontFamily = FontFamily.SansSerif,
         fontWeight = FontWeight.Normal,
@@ -19,32 +23,22 @@ val Typography = Typography(
     ),
 
     subtitle1 = TextStyle(
-        fontFamily = FontFamily.Serif,
+        fontFamily = NexaFont,
         fontWeight = FontWeight.Bold,
         fontSize = 30.sp,
-    )
-
-
-    /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
-        fontSize = 14.sp
     ),
-    caption = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+    subtitle2 = TextStyle(
+        fontFamily = NexaFont,
+        fontSize = 20.sp,
     )
-    */
+
 )
 
 val Typography.customTitle: TextStyle
     @Composable
     get() {
         return  TextStyle(
-                fontFamily = FontFamily(Font(R.font.nexa_regular)),
-                fontWeight = FontWeight.Bold,
+                fontFamily = NexaFont,
                 fontSize = 30.sp
         )
     }

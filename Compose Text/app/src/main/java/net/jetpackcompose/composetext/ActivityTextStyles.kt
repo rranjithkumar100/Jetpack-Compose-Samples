@@ -5,8 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.text.selection.SelectionContainer
-import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -21,19 +19,16 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import net.jetpackcompose.composetext.ui.theme.ComposeTextTheme
-import net.jetpackcompose.composetext.ui.theme.Purple200
+import net.jetpackcompose.composetext.ui.theme.MyAppTheme
 
 class ActivityTextStyles : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposeTextTheme {
+            MyAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     TextStyleContainer()
@@ -205,7 +200,7 @@ fun TextHeadingStyle() {
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun TextStylePreview() {
-    ComposeTextTheme {
+    MyAppTheme {
         TextStyleContainer()
     }
 }

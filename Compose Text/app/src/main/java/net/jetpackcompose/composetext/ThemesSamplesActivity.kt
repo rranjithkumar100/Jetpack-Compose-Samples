@@ -12,12 +12,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import coil.compose.rememberImagePainter
-import coil.request.ImageRequest
 import net.jetpackcompose.composetext.model.FoodModel
 import net.jetpackcompose.composetext.ui.theme.*
 
@@ -33,7 +31,7 @@ class ThemesSamplesActivity : ComponentActivity() {
                 this.window.statusBarColor = ContextCompat.getColor(this,R.color.purple_700)
             }
             //custom theme
-            ComposeTextTheme(darkTheme = isDarkTheme.value) {
+            MyAppTheme(darkTheme = isDarkTheme.value) {
                 Log.d(TAG, "onCreate: isSystemInDarkTheme " + isSystemInDarkTheme())
                 Scaffold(topBar = {
                     ThemeAppBar(darkThemeState = isDarkTheme)
@@ -108,13 +106,8 @@ class ThemesSamplesActivity : ComponentActivity() {
                 FoodImage(url = foodModel.imageUrl)
                 Text(text = foodModel.name, style = MaterialTheme.typography.customTitle)
 
-
                 CompositionLocalProvider(LocalContentAlpha provides (ContentAlpha.disabled)) {
-                    Text(
-                        text = foodModel.description,
-                        color = MaterialTheme.colors.TitleColor,
-                        style = MaterialTheme.typography.body1
-                    )
+                    Text(text = foodModel.description)//description
                 }
             }
         }

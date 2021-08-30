@@ -13,20 +13,6 @@ val SemiBlack = Color(0xFF242121)
 val SemiWhite = Color(0xFFFAF6F6)
 val graySurface = Color(0xFF202124)
 
-val Colors.TitleColor: Color
-    @Composable
-    get() {
-        return if (isLight) SemiBlack
-        else SemiWhite
-    }
-
-val Colors.CardBackground: Color
-    @Composable
-    get() {
-        return if (isLight) SemiWhite
-        else SemiBlack
-    }
-
 
 val Colors.PageBackground: Color
     @Composable
