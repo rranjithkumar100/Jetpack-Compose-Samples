@@ -52,6 +52,9 @@ class HomeActivity : ComponentActivity() {
                 CustomButton(text = "ListView ") {
                     startActivity(Intent(context,ListViewSampleActivity::class.java))
                 }
+                CustomButton(text = "Themes  ") {
+                    startActivity(Intent(context,ThemesSamplesActivity::class.java))
+                }
                 CustomButton(text = "Gradient Samples ") {
                     startActivity(Intent(context,GradientSamplesActivity::class.java))
                 }
