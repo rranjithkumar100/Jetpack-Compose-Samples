@@ -31,37 +31,62 @@ class HomeActivity : ComponentActivity() {
                 verticalArrangement = Arrangement.SpaceAround,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                CustomButton(text = "Text Samples") {
-                    startActivity(Intent(context,TextBasicsActivity::class.java))
+                Row(horizontalArrangement = Arrangement.SpaceAround) {
+
+                    CustomButton(text = "  Text  ") {
+                        startActivity(Intent(context, TextBasicsActivity::class.java))
+                    }
+                    CustomButton(text = "Text Style") {
+                        startActivity(Intent(context, ActivityTextStyles::class.java))
+                    }
                 }
-                CustomButton(text = "Text Style Samples") {
-                    startActivity(Intent(context,ActivityTextStyles::class.java))
-                }
-                CustomButton(text = "Modifier Samples") {
-                    startActivity(Intent(context,ModifierSamplesActivity::class.java))
-                }
-                CustomButton(text = "Button Samples") {
-                    startActivity(Intent(context,ButtonsSampleActivity::class.java))
-                }
-                CustomButton(text = "Textfields ") {
-                    startActivity(Intent(context,ActivityTextField::class.java))
-                }
-                CustomButton(text = "Image Samples ") {
-                    startActivity(Intent(context,ImageSamplesActivity::class.java))
-                }
-                CustomButton(text = "ListView ") {
-                    startActivity(Intent(context,ListViewSampleActivity::class.java))
-                }
-                CustomButton(text = "Themes  ") {
-                    startActivity(Intent(context,ThemesSamplesActivity::class.java))
-                }
-                CustomButton(text = "Gradient Samples ") {
-                    startActivity(Intent(context,GradientSamplesActivity::class.java))
-                }
-                CustomButton(text = "Scaffold Sample ") {
-                    startActivity(Intent(context,ScaffoldSampleActivity::class.java))
+                Row(horizontalArrangement = Arrangement.SpaceAround) {
+
+                    CustomButton(text = "TextFields") {
+                        startActivity(Intent(context, ActivityTextField::class.java))
+                    }
+                    CustomButton(text = " Buttons ") {
+                        startActivity(Intent(context, ButtonsSampleActivity::class.java))
+                    }
                 }
 
+                Row(horizontalArrangement = Arrangement.SpaceAround) {
+
+                    CustomButton(text = "  Image  ") {
+                        startActivity(Intent(context, ImageSamplesActivity::class.java))
+                    }
+                    CustomButton(text = "ListView ") {
+                        startActivity(Intent(context, ListViewSampleActivity::class.java))
+                    }
+                }
+                Row(horizontalArrangement = Arrangement.SpaceAround) {
+
+                    CustomButton(text = " Modifier ") {
+                        startActivity(Intent(context, ModifierSamplesActivity::class.java))
+                    }
+                    CustomButton(text = "  Themes ") {
+                        startActivity(Intent(context, ThemesSamplesActivity::class.java))
+                    }
+
+                }
+                Row(horizontalArrangement = Arrangement.SpaceAround) {
+
+                    CustomButton(text = "Scaffold") {
+                        startActivity(Intent(context, ScaffoldSampleActivity::class.java))
+                    }
+                    CustomButton(text = "  State  ") {
+                        startActivity(Intent(context, ActivityStateManagement::class.java))
+                    }
+                }
+                Row(horizontalArrangement = Arrangement.SpaceAround) {
+
+                    CustomButton(text = "Animation") {
+                        startActivity(Intent(context, ScaffoldSampleActivity::class.java))
+                    }
+                    CustomButton(text = "  Card  ") {
+                        startActivity(Intent(context, ActivityCard::class.java))
+                    }
+                }
             }
         }
     }
@@ -72,7 +97,7 @@ class HomeActivity : ComponentActivity() {
 
 @Composable
 fun CustomButton(text: String, onClickCallBack: () -> Unit) {
-    Button(onClick = onClickCallBack, modifier = Modifier.padding(10.dp)) {
+    Button(onClick = onClickCallBack, modifier = Modifier .padding(10.dp)) {
         Text(text = text, modifier = Modifier.padding(horizontal = 15.dp, vertical = 5.dp))
     }
 }
