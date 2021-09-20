@@ -81,7 +81,7 @@ class HomeActivity : ComponentActivity() {
                 Row(horizontalArrangement = Arrangement.SpaceAround) {
 
                     CustomButton(text = "Animation") {
-                        startActivity(Intent(context, ScaffoldSampleActivity::class.java))
+                        startActivity(Intent(context, AnimationSamplesActivity::class.java))
                     }
                     CustomButton(text = "  Card  ") {
                         startActivity(Intent(context, ActivityCard::class.java))
