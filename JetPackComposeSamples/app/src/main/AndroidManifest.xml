@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.jetpackcompose.composetext">
+<uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ComposeText">
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ThemesSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+
+        <activity
+            android:name=".TextBasicsActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ActivityTextField"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ModifierSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ImageSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ListViewSampleActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ScaffoldSampleActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".GradientSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ActivityTextStyles"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".LayoutsSampleActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ButtonsSampleActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ActivityStateManagement"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".ActivityCard"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+        <activity
+            android:name=".AnimationSamplesActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
+    </application>
+
+</manifest>
