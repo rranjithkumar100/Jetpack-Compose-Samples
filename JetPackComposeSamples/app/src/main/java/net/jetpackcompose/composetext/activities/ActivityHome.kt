@@ -84,6 +84,15 @@ class HomeActivity : ComponentActivity() {
                         startActivity(Intent(context, ActivityCard::class.java))
                     }
                 }
+                Row(horizontalArrangement = Arrangement.SpaceAround) {
+
+                    CustomButton(text = "ProgressBar") {
+                        startActivity(Intent(context, ActivityProgressIndicator::class.java))
+                    }
+                    CustomButton(text = "  Gradient  ") {
+                        startActivity(Intent(context, ActivityGradient::class.java))
+                    }
+                }
             }
         }
     }
