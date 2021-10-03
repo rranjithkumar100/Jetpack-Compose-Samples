@@ -1,4 +1,4 @@
-package net.jetpackcompose.composetext
+package net.jetpackcompose.composetext.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import net.jetpackcompose.composetext.ui.theme.MyAppTheme
 
-class ModifierSamplesActivity : ComponentActivity() {
+class ActivityModifiers : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

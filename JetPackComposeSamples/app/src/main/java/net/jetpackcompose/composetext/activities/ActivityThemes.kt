@@ -1,4 +1,4 @@
-package net.jetpackcompose.composetext
+package net.jetpackcompose.composetext.activities
 
 import android.os.Bundle
 import android.util.Log
@@ -16,19 +16,20 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import coil.compose.rememberImagePainter
+import net.jetpackcompose.composetext.R
 import net.jetpackcompose.composetext.model.FoodModel
 import net.jetpackcompose.composetext.ui.theme.*
 
-class ThemesSamplesActivity : ComponentActivity() {
+class ActivityThemes : ComponentActivity() {
     private val TAG = "ThemesSamplesActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             val isDarkTheme = remember { mutableStateOf(false) }
             if(isDarkTheme.value){
-                this.window.statusBarColor = ContextCompat.getColor(this,R.color.black)
+                this.window.statusBarColor = ContextCompat.getColor(this, R.color.black)
             }else{
-                this.window.statusBarColor = ContextCompat.getColor(this,R.color.purple_700)
+                this.window.statusBarColor = ContextCompat.getColor(this, R.color.purple_700)
             }
             //custom theme
             MyAppTheme(darkTheme = isDarkTheme.value) {

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeText">
         <activity
-            android:name=".HomeActivity"
+            android:name=".activities.HomeActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar">
@@ -22,74 +22,74 @@
         </activity>
 
         <activity
-            android:name=".ThemesSamplesActivity"
+            android:name=".activities.ActivityThemes"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
 
         <activity
-            android:name=".TextBasicsActivity"
+            android:name=".activities.TextBasicsActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ActivityTextField"
+            android:name=".activities.ActivityTextField"
             android:exported="true"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ModifierSamplesActivity"
+            android:name=".activities.ActivityModifiers"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ImageSamplesActivity"
+            android:name=".activities.ImageSamplesActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ListViewSampleActivity"
+            android:name=".activities.ActivityList"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ScaffoldSampleActivity"
+            android:name=".activities.ScaffoldSampleActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".GradientSamplesActivity"
+            android:name=".activities.GradientSamplesActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ActivityTextStyles"
+            android:name=".activities.ActivityTextStyles"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".LayoutsSampleActivity"
+            android:name=".activities.ActivityLayouts"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ButtonsSampleActivity"
+            android:name=".activities.ButtonsSampleActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ActivityStateManagement"
+            android:name=".activities.ActivityStateManagement"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".ActivityCard"
+            android:name=".activities.ActivityCard"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
         <activity
-            android:name=".AnimationSamplesActivity"
+            android:name=".activities.AnimationSamplesActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />

@@ -1,4 +1,4 @@
-package net.jetpackcompose.composetext
+package net.jetpackcompose.composetext.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 
-class LayoutsSampleActivity : ComponentActivity() {
+class ActivityLayouts : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

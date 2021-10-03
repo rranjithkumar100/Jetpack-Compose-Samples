@@ -1,4 +1,4 @@
-package net.jetpackcompose.composetext
+package net.jetpackcompose.composetext.activities
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

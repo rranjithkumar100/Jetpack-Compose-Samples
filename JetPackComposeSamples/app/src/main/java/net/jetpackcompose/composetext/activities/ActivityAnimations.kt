@@ -1,9 +1,7 @@
-package net.jetpackcompose.composetext
+package net.jetpackcompose.composetext.activities
 
 import android.app.Activity
 import android.os.Bundle
-import android.transition.Transition
-import android.util.Log
 import android.view.MotionEvent
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
@@ -29,17 +27,14 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.onGloballyPositioned
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import net.jetpackcompose.composetext.R
 
 class AnimationSamplesActivity : ComponentActivity() {
     @OptIn(ExperimentalAnimationApi::class)
