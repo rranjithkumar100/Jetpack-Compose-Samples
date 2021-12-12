@@ -11,7 +11,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.unit.dp
+import net.jetpackcompose.composetext.R
+import net.jetpackcompose.composetext.util.sdp
 
 class HomeActivity : ComponentActivity() {
     private val TAG = "HomeActivity"
@@ -89,8 +92,8 @@ class HomeActivity : ComponentActivity() {
                     CustomButton(text = "ProgressBar") {
                         startActivity(Intent(context, ActivityProgressIndicator::class.java))
                     }
-                    CustomButton(text = "  Gradient  ") {
-                        startActivity(Intent(context, ActivityGradient::class.java))
+                    CustomButton(text = "  Alert Dialog  ") {
+                        startActivity(Intent(context, ActivityAlertDialog::class.java))
                     }
                 }
             }

@@ -99,6 +99,12 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeText.NoActionBar" />
+
+        <activity
+            android:name=".activities.ActivityAlertDialog"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ComposeText.NoActionBar" />
     </application>
 
 </manifest>
