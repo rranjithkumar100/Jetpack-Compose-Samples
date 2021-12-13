@@ -1,6 +1,7 @@
 # Jetpack-Compose-Samples
 
 You can learn about jetpack compose with simple examples.
+Our blog url - https://www.jetpackcompose.net/ 
 
 # Simple Text
 
