@@ -112,7 +112,7 @@ You can learn about jetpack compose with simple examples.
 			}
 		}
 		
-		![image](https://user-images.githubusercontent.com/87621926/145779269-2a716b1d-6188-490f-a6fd-5ccc5d8dc9f6.png)
+![image](https://user-images.githubusercontent.com/87621926/145779269-2a716b1d-6188-490f-a6fd-5ccc5d8dc9f6.png)
 
 
 
